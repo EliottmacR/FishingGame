@@ -52,6 +52,11 @@ function _init()
       protocol = "tlsv1"
   }
   log(response)
+  log(c)
+  for i, v in pairs(h) do
+    log(v)
+  end
+  log(s)
   
   
   end
