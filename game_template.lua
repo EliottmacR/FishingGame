@@ -77,7 +77,7 @@ function _init()
     local https = require 'ssl.https'
     local response, c, h, s = https.request{
         url = "http://fulano:silva@www.example.com/private/index.html",
-        sink = file,
+        sink = log(file),
         protocol = "tlsv1"
     }
     log(response)
