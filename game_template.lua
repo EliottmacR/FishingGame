@@ -28,15 +28,15 @@ function _init()
     _game_registery = params.game_registery or {}
   end
   if not _game_registery then 
+  local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
   -- _game_registery = 
-  -- local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
   -- local response, _game_registery = http.request(g_r_url)
   -- log("here")
   -- log(response)
   -- log(_game_registery)
   local http = require("socket.http")
   local body, code = http.request(g_r_url)
-  if not body then error(code) end
+  if not body then log(code) end
   
   end
 end
