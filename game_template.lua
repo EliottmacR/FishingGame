@@ -1,4 +1,5 @@
 require("framework/framework.lua")
+require("socket")
 http = require("socket.http")
 _palette = {0, 17, 14, 13, 20, 4}
 
@@ -65,7 +66,7 @@ function _init()
       -- log("noooooo")
     -- end
     
-    b, c, h = http.request("http://fulano:silva@www.example.com/private/index.html")
+    -- b, c, h = http.request("http://fulano:silva@www.example.com/private/index.html")
     
     -- log(b)
     -- log(c)
@@ -74,20 +75,23 @@ function _init()
     -- end
     
     
-    local https = require 'ssl.https'
+    -- local https = require 'ssl.https'
     -- local file = ltn12.sink.file(io.open('game_registery', 'r'))
-    local response, c, h, s = https.request{
-        url = "http://fulano:silva@www.example.com/private/index.html",
-        sink = file,
-        protocol = "tlsv1"
-    }
-    if response then
-    log(response)
+    -- local response, c, h, s = https.request{
+        -- url = "http://fulano:silva@www.example.com/private/index.html",
+        -- sink = file,
+        -- protocol = "tlsv1"
+    -- }
+    -- if response then
+    -- log(response)
     -- sink()
     -- for i, v in pairs(h) do
       -- log(v)
-    end
-    
+    -- end
+    require("socket")
+    local https = require("ssl.https")
+    local body, code, headers, status = https.request("https://www.google.com")
+    print(status)
     
     
     
