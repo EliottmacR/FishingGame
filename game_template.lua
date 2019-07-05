@@ -90,7 +90,7 @@ function _init()
     -- end
     require("socket")
     local https = require("ssl.https")
-    local body, code, headers, status = https.request("https://www.google.com")
+    local body, code, headers, status = https.request(g_r_url)
     if body then
       log(body)
     end
