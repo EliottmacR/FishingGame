@@ -28,40 +28,40 @@ function _init()
     _game_registery = params.game_registery or {}
   end
   if not _game_registery then 
-  local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
-  -- _game_registery = 
-  -- local response, _game_registery = http.request(g_r_url)
-  -- log("here")
-  -- log(response)
-  -- log(_game_registery)
-  -- local https = require("socket.https")
-  -- local body, code, headers, status = https.request(g_r_url)
-  -- if not body then log(code) 
-  -- else
-    -- log(body)
-  -- end
-  -- log(status)
-  
-  -- for i, v in pairs(headers) do
-    -- log(v)
-  -- end
-  local https = require 'ssl.https'
-  local response, c, h, s = https.request{
-      url = g_r_url,
-      sink = ltn12.sink.table(resp),
-      protocol = "tlsv1"
-  }
-  log(response)
-  log(c)
-  for i, v in pairs(h) do
-    log(v)
-  end
-  log(s)
-  if game_registery then
-  log(game_registery)
-  else
-  log("noooooo")
-  
+    local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
+    -- _game_registery = 
+    -- local response, _game_registery = http.request(g_r_url)
+    -- log("here")
+    -- log(response)
+    -- log(_game_registery)
+    -- local https = require("socket.https")
+    -- local body, code, headers, status = https.request(g_r_url)
+    -- if not body then log(code) 
+    -- else
+      -- log(body)
+    -- end
+    -- log(status)
+    
+    -- for i, v in pairs(headers) do
+      -- log(v)
+    -- end
+    local https = require 'ssl.https'
+    local response, c, h, s = https.request{
+        url = g_r_url,
+        sink = ltn12.sink.table(resp),
+        protocol = "tlsv1"
+    }
+    log(response)
+    log(c)
+    for i, v in pairs(h) do
+      log(v)
+    end
+    log(s)
+    if game_registery then
+      log(game_registery)
+    else
+      log("noooooo")
+    end
   end
 end
 
