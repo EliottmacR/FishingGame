@@ -78,10 +78,11 @@ function _init()
     local file = ltn12.sink.file(io.open('game_registery', 'r'))
     local response, c, h, s = https.request{
         url = "http://fulano:silva@www.example.com/private/index.html",
-        sink = log(file),
+        sink = file,
         protocol = "tlsv1"
     }
     log(response)
+    sink()
     -- for i, v in pairs(h) do
       -- log(v)
     -- end
