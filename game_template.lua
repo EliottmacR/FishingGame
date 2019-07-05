@@ -30,70 +30,13 @@ function _init()
   end
   if not _game_registery then 
     local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
-    -- _game_registery = 
-    -- local response, _game_registery = http.request(g_r_url)
-    -- log("here")
-    -- log(response)
-    -- log(_game_registery)
-    -- local https = require("socket.https")
-    -- local body, code, headers, status = https.request(g_r_url)
-    -- if not body then log(code) 
-    -- else
-      -- log(body)
-    -- end
-    -- log(status)
-    
-    -- for i, v in pairs(headers) do
-      -- log(v)
-    -- end
-    -- local https = require 'ssl.https'
-    -- local file = ltn12.sink.file(io.open('game_registery', 'r'))
-    -- local response, c, h, s = https.request{
-        -- url = g_r_url,
-        -- sink = file,
-        -- protocol = "tlsv1"
-    -- }
-    -- local file = ltn12.sink.file(io.open('game_registery', 'r'))
-    -- log(response)
-    -- log(c)
-    -- for i, v in pairs(h) do
-      -- log(v)
-    -- end
-    -- log(s)
-    -- if game_registery then
-      -- log(game_registery)
-    -- else
-      -- log("noooooo")
-    -- end
-    
-    -- b, c, h = http.request("http://fulano:silva@www.example.com/private/index.html")
-    
-    -- log(b)
-    -- log(c)
-    -- for i, v in pairs(h) do
-      -- log(v)
-    -- end
-    
-    
-    -- local https = require 'ssl.https'
-    -- local file = ltn12.sink.file(io.open('game_registery', 'r'))
-    -- local response, c, h, s = https.request{
-        -- url = "http://fulano:silva@www.example.com/private/index.html",
-        -- sink = file,
-        -- protocol = "tlsv1"
-    -- }
-    -- if response then
-    -- log(response)
-    -- sink()
-    -- for i, v in pairs(h) do
-      -- log(v)
-    -- end
     require("socket")
     local https = require("ssl.https")
     local body, code, headers, status = https.request(g_r_url)
     if body then
       log(body)
-    end
+    else
+      log("Could not load other games")
     if status then
       log(status)
     end
