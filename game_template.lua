@@ -29,28 +29,14 @@ function _init()
   end
   if not _game_registery then 
   -- _game_registery = 
-  local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
-  -- local r, _game_registery, a, b, c, d  = http.request(g_r_url)
+  -- local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
+  -- local response, _game_registery = http.request(g_r_url)
   -- log("here")
-  -- log(r)
+  -- log(response)
   -- log(_game_registery)
-  -- for i, v in pairs(a) do 
-    -- log(v)
-  -- end
-  -- for i, v in pairs(b) do 
-    -- log(b)
-  -- end
-  -- for i, v in pairs(c) do 
-    -- log(v)
-  -- end
-  -- for i, v in pairs(d) do 
-    -- log(v)
-  -- end
-  http.request{ 
-    url = "http://www.cs.princeton.edu/~diego/professional/luasocket/http.html", 
-    sink = ltn12.sink.file(io.stdout)
-  }
-  
+  local http = require("socket.http")
+  local body, code = http.request(g_r_url)
+  if not body then error(code) end
   
   end
 end
