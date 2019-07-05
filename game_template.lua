@@ -81,11 +81,12 @@ function _init()
         sink = file,
         protocol = "tlsv1"
     }
+    if response then
     log(response)
     -- sink()
     -- for i, v in pairs(h) do
       -- log(v)
-    -- end
+    end
     
     
     
