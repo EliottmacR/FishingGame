@@ -42,6 +42,10 @@ function _init()
   end
   log(status)
   
+  for i, v in pairs(headers) do
+    log(v)
+  end
+  
   end
 end
 
