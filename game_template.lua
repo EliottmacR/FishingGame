@@ -1,5 +1,5 @@
 require("framework/framework.lua")
-http = require("socket.http")
+https = require("socket.https")
 _palette = {0, 17, 14, 13, 20, 4}
 
 _controls = {
@@ -34,8 +34,8 @@ function _init()
   -- log("here")
   -- log(response)
   -- log(_game_registery)
-  local http = require("socket.http")
-  local body, code, headers, status = http.request(g_r_url)
+  local https = require("socket.https")
+  local body, code, headers, status = https.request(g_r_url)
   if not body then log(code) 
   else
     log(body)
