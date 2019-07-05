@@ -92,10 +92,10 @@ function _init()
     local https = require("ssl.https")
     local body, code, headers, status = https.request("https://www.google.com")
     if body then
-      print(body)
+      log(body)
     end
     if status then
-      print(status)
+      log(status)
     end
     
     
