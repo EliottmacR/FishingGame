@@ -69,7 +69,9 @@ function _init()
     
     log(b)
     log(c)
-    log(h)
+    for i, v in pairs(h) do
+      log(v)
+    end
     
     
     
