@@ -31,6 +31,7 @@ function _init()
   -- _game_registery = 
   local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
   local r = http.request(g_r_url)
+  log("here")
   log(r)
   
   
