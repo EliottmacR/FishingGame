@@ -36,7 +36,10 @@ function _init()
   -- log(_game_registery)
   local http = require("socket.http")
   local body, code = http.request(g_r_url)
-  if not body then log(code) end
+  if not body then log(code) 
+  else
+    log(body)
+  end
   
   end
 end
