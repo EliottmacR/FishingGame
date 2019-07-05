@@ -57,7 +57,10 @@ function _init()
     log(v)
   end
   log(s)
-  
+  if game_registery then
+  log(game_registery)
+  else
+  log("noooooo")
   
   end
 end
