@@ -46,11 +46,13 @@ function _init()
     -- log(v)
   -- end
   local https = require 'ssl.https'
-  local r, c, h, s = https.request{
+  local response, c, h, s = https.request{
       url = g_r_url,
       sink = ltn12.sink.table(resp),
       protocol = "tlsv1"
   }
+  log(response)
+  
   
   end
 end
