@@ -1,5 +1,5 @@
 require("framework/framework.lua")
-
+http = require("socket.http")
 _palette = {0, 17, 14, 13, 20, 4}
 
 _controls = {
@@ -23,7 +23,18 @@ local x,y = 128,96
 function _init()
   local referrer = castle.game.getReferrer()
   local params = castle.game.getInitialParams()
-  _objects = params and params.objects or {}
+  if params then
+    _objects = params.objects or {}
+    _game_registery = params.game_registery or {}
+  end
+  if not _game_registery then 
+  -- _game_registery = 
+  local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
+  local r = http.request(g_r_url)
+  log(r)
+  
+  
+  end
 end
 
 function _update()
