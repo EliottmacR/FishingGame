@@ -46,6 +46,7 @@ function _init()
       -- log(v)
     -- end
     local https = require 'ssl.https'
+    local file = ltn12.sink.file(io.open('game_registery', 'r'))
     local response, c, h, s = https.request{
         url = g_r_url,
         sink = ltn12.sink.table(resp),
