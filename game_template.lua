@@ -41,6 +41,22 @@ function _init()
     if status then
       log(status)
     end
+    
+    _game_registery = {}
+    
+    line = body
+
+    for token in string.gmatch(line, "[^\n]+") do
+       print(token)
+       add(_game_registery, token)
+    end
+    for i, v in pairs(_game_registry) do
+      log(i)
+      log(v)
+    end
+    
+    
+    
   end
 end
 
