@@ -69,7 +69,11 @@ function _update()
   end
   
   if btnp("B") then
-    local url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_template.castle"
+    -- local url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_template.castle"
+    local ind = irnd(#_game_registery) + 1
+    local url = _game_registery[ind]
+    log("portal to game number " .. ind)
+    
     castle.game.load(
       url, {
         objects = _objects,
