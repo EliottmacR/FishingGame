@@ -29,10 +29,15 @@ function _init()
   end
   if not _game_registery then 
   -- _game_registery = 
-  local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
-  local r = http.request(g_r_url)
+  -- local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
+  local r, _game_registery  = http.request(g_r_url)
   log("here")
   log(r)
+  log(_game_registery)
+  -- http.request{ 
+    -- url = "http://www.cs.princeton.edu/~diego/professional/luasocket/http.html", 
+    -- sink = ltn12.sink.file(io.stdout)
+  -- }
   
   
   end
