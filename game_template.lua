@@ -17,25 +17,46 @@ _controls = {
   [ "cur_rb" ] = "Send movie to director!"
 }
 
+_objects = {}
 
 local x,y = 128,96
 function _init()
-
+  local referrer = castle.game.getReferrer()
+  local params = castle.game.getInitialParams()
+  objects = param and params.objects or {}
+  log("inited")
 end
 
 function _update()
   x = x - btnv("left") + btnv("right")
   y = y - btnv("up") + btnv("down")
   
-  if btn("A") then
-    -- ??
+  if btnp("A") then
+    add(_objects, {spr = 0x03,  p = {x = btnv("cur_x"), y = btnv("cur_y")}})  
+    log("here")
   end
+  
+  if btnp("B") then
+    -- local url = [["C:\Users\Eliott\Desktop\git repos\Collection\game_template.castle"]]
+    -- local url = "https://raw.githubusercontent.com/schazers/ghost-racer/master/main.lua"
+    local url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_template.castle"
+    castle.game.load(
+      url, {
+        objects = _objects,
+      }
+    )
+  end
+  
 end
 
 function _draw()
   cls(1)
   
   glyph(0x03, 32, 32, 16, 16, 2*t(), 2, 3)
+  
+  for _, obj in pairs(_objects) do
+    glyph(obj.spr, obj.p.x, obj.p.y, 16, 16, 2*t(), 2, 3)  
+  end
   
 --  circfill(x, y, 7, 2)
   local a = atan2(btnv"cur_x" - x, btnv"cur_y" - y)
