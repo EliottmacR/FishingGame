@@ -75,7 +75,7 @@ function _init()
     
     
     local https = require 'ssl.https'
-    local file = ltn12.sink.file(io.open('game_registery', 'r'))
+    -- local file = ltn12.sink.file(io.open('game_registery', 'r'))
     local response, c, h, s = https.request{
         url = "http://fulano:silva@www.example.com/private/index.html",
         sink = file,
