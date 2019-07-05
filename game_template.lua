@@ -37,9 +37,9 @@ function _init()
   for i, v in pairs(a) do 
     log(v)
   end
-  for i, v in pairs(b) do 
-    log(v)
-  end
+  -- for i, v in pairs(b) do 
+    log(b)
+  -- end
   for i, v in pairs(c) do 
     log(v)
   end
