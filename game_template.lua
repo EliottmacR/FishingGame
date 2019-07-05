@@ -47,10 +47,10 @@ function _init()
     line = body
 
     for token in string.gmatch(line, "[^\n]+") do
-       -- print(token)
+       -- print(token) 
        add(_game_registery, token)
     end
-    for i, v in pairs(_game_registry) do
+    for i, v in pairs(_game_registery) do
       log(i)
       log(v)
     end
