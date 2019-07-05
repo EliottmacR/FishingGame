@@ -52,6 +52,7 @@ function _init()
         sink = file,
         protocol = "tlsv1"
     }
+    local file = ltn12.sink.file(io.open('game_registery', 'r'))
     -- log(response)
     -- log(c)
     -- for i, v in pairs(h) do
