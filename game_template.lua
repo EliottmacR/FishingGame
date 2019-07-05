@@ -23,7 +23,7 @@ local x,y = 128,96
 function _init()
   local referrer = castle.game.getReferrer()
   local params = castle.game.getInitialParams()
-  objects = param and params.objects or {}
+  objects = params and params.objects or {}
   log("inited")
 end
 
