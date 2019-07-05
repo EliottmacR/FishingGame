@@ -45,25 +45,39 @@ function _init()
     -- for i, v in pairs(headers) do
       -- log(v)
     -- end
-    local https = require 'ssl.https'
-    local file = ltn12.sink.file(io.open('game_registery', 'r'))
-    local response, c, h, s = https.request{
-        url = g_r_url,
-        sink = file,
-        protocol = "tlsv1"
-    }
-    local file = ltn12.sink.file(io.open('game_registery', 'r'))
+    -- local https = require 'ssl.https'
+    -- local file = ltn12.sink.file(io.open('game_registery', 'r'))
+    -- local response, c, h, s = https.request{
+        -- url = g_r_url,
+        -- sink = file,
+        -- protocol = "tlsv1"
+    -- }
+    -- local file = ltn12.sink.file(io.open('game_registery', 'r'))
     -- log(response)
     -- log(c)
     -- for i, v in pairs(h) do
       -- log(v)
     -- end
     -- log(s)
-    if game_registery then
-      log(game_registery)
-    else
-      log("noooooo")
-    end
+    -- if game_registery then
+      -- log(game_registery)
+    -- else
+      -- log("noooooo")
+    -- end
+    
+    b, c, h = http.request("http://fulano:silva@www.example.com/private/index.html")
+    
+    log(b)
+    log(c)
+    log(h)
+    
+    
+    
+    
+    
+    
+    
+    
   end
 end
 
