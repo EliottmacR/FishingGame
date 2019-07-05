@@ -34,17 +34,23 @@ function _init()
   -- log("here")
   -- log(response)
   -- log(_game_registery)
-  local https = require("socket.https")
-  local body, code, headers, status = https.request(g_r_url)
-  if not body then log(code) 
-  else
-    log(body)
-  end
-  log(status)
+  -- local https = require("socket.https")
+  -- local body, code, headers, status = https.request(g_r_url)
+  -- if not body then log(code) 
+  -- else
+    -- log(body)
+  -- end
+  -- log(status)
   
-  for i, v in pairs(headers) do
-    log(v)
-  end
+  -- for i, v in pairs(headers) do
+    -- log(v)
+  -- end
+  local https = require 'ssl.https'
+  local r, c, h, s = https.request{
+      url = g_r_url,
+      sink = ltn12.sink.table(resp),
+      protocol = "tlsv1"
+  }
   
   end
 end
