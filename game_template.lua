@@ -35,11 +35,12 @@ function _init()
   -- log(response)
   -- log(_game_registery)
   local http = require("socket.http")
-  local body, code = http.request(g_r_url)
+  local body, code, headers, status = http.request(g_r_url)
   if not body then log(code) 
   else
     log(body)
   end
+  log(status)
   
   end
 end
