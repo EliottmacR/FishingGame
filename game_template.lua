@@ -26,7 +26,7 @@ function _init()
   local params = castle.game.getInitialParams()
   if params then
     _objects = params.objects or {}
-    _game_registery = params.game_registery or {}
+    _game_registery = params._game_registery or {}
   end
   if not _game_registery then 
     local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
@@ -77,6 +77,7 @@ function _update()
     castle.game.load(
       url, {
         objects = _objects,
+        _game_registery = _game_registery
       }
     )
   end
