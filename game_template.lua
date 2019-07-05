@@ -50,10 +50,10 @@ function _init()
        -- print(token) 
        add(_game_registery, token)
     end
-    for i, v in pairs(_game_registery) do
-      log(i)
-      log(v)
-    end
+    -- for i, v in pairs(_game_registery) do
+      -- log(i)
+      -- log(v)
+    -- end
     
     
     
@@ -73,6 +73,7 @@ function _update()
     local ind = irnd(#_game_registery) + 1
     local url = _game_registery[ind]
     log("portal to game number " .. ind)
+    log("url =  " .. url)
     
     castle.game.load(
       url, {
