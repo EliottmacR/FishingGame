@@ -37,13 +37,10 @@ function _init()
       log(body)
     else
       log("Could not load other games")
+    end
     if status then
       log(status)
     end
-    
-    
-    
-    
   end
 end
 
