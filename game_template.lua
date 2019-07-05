@@ -1,5 +1,5 @@
 require("framework/framework.lua")
-https = require("socket.https")
+-- https = require("socket.https")
 _palette = {0, 17, 14, 13, 20, 4}
 
 _controls = {
