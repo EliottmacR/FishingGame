@@ -34,7 +34,9 @@ function _init()
   log("here")
   log(r)
   log(_game_registery)
-  log(a)
+  for i, v in pairs(a) do 
+    log(v)
+  end
   log(b)
   log(c)
   log(d)
