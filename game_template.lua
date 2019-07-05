@@ -82,7 +82,7 @@ function _init()
         protocol = "tlsv1"
     }
     log(response)
-    sink()
+    -- sink()
     -- for i, v in pairs(h) do
       -- log(v)
     -- end
