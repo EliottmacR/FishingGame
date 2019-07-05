@@ -23,8 +23,9 @@ local x,y = 128,96
 function _init()
   local referrer = castle.game.getReferrer()
   local params = castle.game.getInitialParams()
-  objects = params and params.objects or {}
+  _objects = params and params.objects or {}
   log("inited")
+  -- for i, o in pairs objec
 end
 
 function _update()
@@ -45,6 +46,7 @@ function _update()
         objects = _objects,
       }
     )
+    
   end
   
 end
