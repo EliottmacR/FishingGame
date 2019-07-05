@@ -37,9 +37,15 @@ function _init()
   for i, v in pairs(a) do 
     log(v)
   end
-  log(b)
-  log(c)
-  log(d)
+  for i, v in pairs(b) do 
+    log(v)
+  end
+  for i, v in pairs(c) do 
+    log(v)
+  end
+  for i, v in pairs(d) do 
+    log(v)
+  end
   -- http.request{ 
     -- url = "http://www.cs.princeton.edu/~diego/professional/luasocket/http.html", 
     -- sink = ltn12.sink.file(io.stdout)
