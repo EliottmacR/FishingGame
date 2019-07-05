@@ -24,8 +24,6 @@ function _init()
   local referrer = castle.game.getReferrer()
   local params = castle.game.getInitialParams()
   _objects = params and params.objects or {}
-  log("inited")
-  -- for i, o in pairs objec
 end
 
 function _update()
@@ -34,19 +32,15 @@ function _update()
   
   if btnp("A") then
     add(_objects, {spr = 0x03,  p = {x = btnv("cur_x"), y = btnv("cur_y")}})  
-    log("here")
   end
   
   if btnp("B") then
-    -- local url = [["C:\Users\Eliott\Desktop\git repos\Collection\game_template.castle"]]
-    -- local url = "https://raw.githubusercontent.com/schazers/ghost-racer/master/main.lua"
     local url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_template.castle"
     castle.game.load(
       url, {
         objects = _objects,
       }
     )
-    
   end
   
 end
