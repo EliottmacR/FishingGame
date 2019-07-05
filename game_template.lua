@@ -91,8 +91,12 @@ function _init()
     require("socket")
     local https = require("ssl.https")
     local body, code, headers, status = https.request("https://www.google.com")
-    print(status)
-    
+    if body then
+      print(body)
+    end
+    if status then
+      print(status)
+    end
     
     
     
