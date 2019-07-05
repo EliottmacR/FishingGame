@@ -33,14 +33,14 @@ function _init()
     require("socket")
     local https = require("ssl.https")
     local body, code, headers, status = https.request(g_r_url)
-    if body then
-      log(body)
-    else
-      log("Could not load other games")
-    end
-    if status then
-      log(status)
-    end
+    -- if body then
+      -- log(body)
+    -- else
+      -- log("Could not load other games")
+    -- end
+    -- if status then
+      -- log(status)
+    -- end
     
     _game_registery = {}
     
@@ -50,10 +50,10 @@ function _init()
        -- print(token) 
        add(_game_registery, token)
     end
-    for i, v in pairs(_game_registery) do
-      log(i)
-      log(v)
-    end
+    -- for i, v in pairs(_game_registery) do
+      -- log(i)
+      -- log(v)
+    -- end
     
     
     
@@ -73,6 +73,7 @@ function _update()
     local ind = irnd(#_game_registery) + 1
     local url = _game_registery[ind]
     log("portal to game number " .. ind)
+    log("url =  " .. url)
     
     castle.game.load(
       url, {
