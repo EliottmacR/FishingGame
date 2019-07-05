@@ -30,16 +30,16 @@ function _init()
   if not _game_registery then 
   -- _game_registery = 
   local g_r_url = "https://raw.githubusercontent.com/EliottmacR/Collection/master/game_registery"
-  local r, _game_registery, a, b, c, d  = http.request(g_r_url)
-  log("here")
-  log(r)
-  log(_game_registery)
+  -- local r, _game_registery, a, b, c, d  = http.request(g_r_url)
+  -- log("here")
+  -- log(r)
+  -- log(_game_registery)
   -- for i, v in pairs(a) do 
     -- log(v)
   -- end
-  for i, v in pairs(b) do 
+  -- for i, v in pairs(b) do 
     -- log(b)
-  end
+  -- end
   -- for i, v in pairs(c) do 
     -- log(v)
   -- end
