@@ -49,15 +49,15 @@ function _init()
     local file = ltn12.sink.file(io.open('game_registery', 'r'))
     local response, c, h, s = https.request{
         url = g_r_url,
-        sink = ltn12.sink.table(resp),
+        sink = file,
         protocol = "tlsv1"
     }
-    log(response)
-    log(c)
-    for i, v in pairs(h) do
-      log(v)
-    end
-    log(s)
+    -- log(response)
+    -- log(c)
+    -- for i, v in pairs(h) do
+      -- log(v)
+    -- end
+    -- log(s)
     if game_registery then
       log(game_registery)
     else
