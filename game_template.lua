@@ -67,13 +67,20 @@ function _init()
     
     b, c, h = http.request("http://fulano:silva@www.example.com/private/index.html")
     
-    log(b)
-    log(c)
-    for i, v in pairs(h) do
-      log(v)
-    end
+    -- log(b)
+    -- log(c)
+    -- for i, v in pairs(h) do
+      -- log(v)
+    -- end
     
     
+    local https = require 'ssl.https'
+    local response, c, h, s = https.request{
+        url = "http://fulano:silva@www.example.com/private/index.html",
+        sink = file,
+        protocol = "tlsv1"
+    }
+    log(r)
     
     
     
