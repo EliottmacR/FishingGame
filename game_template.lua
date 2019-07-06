@@ -43,6 +43,7 @@ function _draw()
   
   -- glyph(0x03, 32, 32, 16, 16, 2*t(), 2, 3)
   
+    
   -- games 
   for i, game in pairs(_game_registery) do
     rectfill(0,(i)*24, str_px_width(game.name), (i+1)*24, flr(t()* 3) + 1)
@@ -54,6 +55,9 @@ function _draw()
     end
   end
   
+  -- name of this game
+    print("Fishing Game", GW / 2 - str_px_width("Fishing Game")/2, 2, flr(t()* 3))  
+    
   -- objects
   for _, obj in pairs(_objects) do
     glyph(obj.spr, obj.p.x, obj.p.y, 16, 16, 2*t(), 2, 3)  
