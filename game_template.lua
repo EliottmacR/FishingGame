@@ -43,7 +43,7 @@ function _update()
 end
 
 function _draw()
-  cls(1)
+  -- cls(1)
   
   -- glyph(0x03, 32, 32, 16, 16, 2*t(), 2, 3)
   
