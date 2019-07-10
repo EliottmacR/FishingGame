@@ -43,7 +43,7 @@ function _update()
 end
 
 function _draw()
-  -- cls(1)
+  cls(1)
   
   -- glyph(0x03, 32, 32, 16, 16, 2*t(), 2, 3)
   
@@ -60,7 +60,7 @@ function _draw()
   -- end
   
   -- name of this game
-    -- print("Fishing Game", GW / 2 - sugar.gfx.str_px_width("Fishing Game")/2, 2, flr(t()* 3))  
+    print("Fishing Game", GW / 2 - sugar.gfx.str_px_width("Fishing Game")/2, 2, flr(t()* 3))  
     
   -- objects
   for _, obj in pairs(_objects) do
