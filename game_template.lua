@@ -20,9 +20,11 @@ _controls = {
 _objects = {}
 
 local x,y = 128,96
-function _init()
+local GW, GH = 0, 0
 
-
+function _init(w, h)
+  GW = w or 0
+  GH = h or 0
 end
 
 function _update()
