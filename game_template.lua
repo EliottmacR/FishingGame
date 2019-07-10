@@ -28,22 +28,22 @@ function _init(w, h)
 end
 
 function _update()
-  x = x - btnv("left") + btnv("right")
-  y = y - btnv("up") + btnv("down")
+  -- x = x - btnv("left") + btnv("right")
+  -- y = y - btnv("up") + btnv("down")
   
-  if btnp("A") or btnp("cur_rb") then
-    add(_objects, {spr = 0x03,  p = {x = btnv("cur_x"), y = btnv("cur_y")}})  
-  end
+  -- if btnp("A") or btnp("cur_rb") then
+    -- add(_objects, {spr = 0x03,  p = {x = btnv("cur_x"), y = btnv("cur_y")}})  
+  -- end
     
-  if btnp("B") or btnp("cur_lb") then
-    _objects = {}  
-  end
+  -- if btnp("B") or btnp("cur_lb") then
+    -- _objects = {}  
+  -- end
   
   
 end
 
 function _draw()
-  cls(1)
+  -- cls(1)
   
   -- glyph(0x03, 32, 32, 16, 16, 2*t(), 2, 3)
   
@@ -60,19 +60,19 @@ function _draw()
   -- end
   
   -- name of this game
-    print("Fishing Game", GW / 2 - sugar.gfx.str_px_width("Fishing Game")/2, 2, flr(t()* 3))  
+    -- print("Fishing Game", GW / 2 - sugar.gfx.str_px_width("Fishing Game")/2, 2, flr(t()* 3))  
     
   -- objects
-  for _, obj in pairs(_objects) do
-    glyph(obj.spr, obj.p.x, obj.p.y, 16, 16, 2*t(), 2, 3)  
-  end
+  -- for _, obj in pairs(_objects) do
+    -- glyph(obj.spr, obj.p.x, obj.p.y, 16, 16, 2*t(), 2, 3)  
+  -- end
   
---  circfill(x, y, 7, 2)
-  local a = atan2(btnv"cur_x" - x, btnv"cur_y" - y)
-  outlined_glyph(0x20, x, y, 16, sgn(cos(a)) * (16 + 2*sin(t())), a, 2, 3, 0)
+ -- circfill(x, y, 7, 2)
+  -- local a = atan2(btnv"cur_x" - x, btnv"cur_y" - y)
+  -- outlined_glyph(0x20, x, y, 16, sgn(cos(a)) * (16 + 2*sin(t())), a, 2, 3, 0)
   
---  circ(btnv("cur_x"), btnv("cur_y"), btn("cur_rb") and 6 or btn("cur_lb") and 12 or 3, 4)
-  outlined_glyph(0x00, btnv("cur_x"), btnv("cur_y"), 8 + 8 * btnv("cur_lb"), 8 + 8 * btnv("cur_rb"), 0, 4, 5, 0)
+ -- circ(btnv("cur_x"), btnv("cur_y"), btn("cur_rb") and 6 or btn("cur_lb") and 12 or 3, 4)
+  -- outlined_glyph(0x00, btnv("cur_x"), btnv("cur_y"), 8 + 8 * btnv("cur_lb"), 8 + 8 * btnv("cur_rb"), 0, 4, 5, 0)
   
   
   
