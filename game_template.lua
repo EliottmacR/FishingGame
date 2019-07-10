@@ -1,5 +1,5 @@
-require("framework/framework.lua")
-require("socket")
+require("https://raw.githubusercontent.com/EliottmacR/framework_collection/master/framework.lua")
+
 _palette = {0, 17, 14, 13, 20, 4}
 
 _controls = {
@@ -47,15 +47,15 @@ function _draw()
   
     
   -- games 
-  for i, game in pairs(_game_registery) do
-    rectfill(0,(i)*24, str_px_width(game.name), (i+1)*24, flr(t()* 3) + 1)
-    print(game.name, 0, i*24, flr(t()* 3))  
-    glyph(game.player_spr, str_px_width(game.name), i*24, 16, 16, 2*t(), 2, 3) 
+  -- for i, game in pairs(_game_registery) do
+    -- rectfill(0,(i)*24, str_px_width(game.name), (i+1)*24, flr(t()* 3) + 1)
+    -- print(game.name, 0, i*24, flr(t()* 3))  
+    -- glyph(game.player_spr, str_px_width(game.name), i*24, 16, 16, 2*t(), 2, 3) 
     
-    if btnp("cur_lb") and point_in_rect(btnv("cur_x"),btnv("cur_y"), 0,i*24, str_px_width(game.name), (i+1)*24) then
-      go_to_game(i)
-    end
-  end
+    -- if btnp("cur_lb") and point_in_rect(btnv("cur_x"),btnv("cur_y"), 0,i*24, str_px_width(game.name), (i+1)*24) then
+      -- go_to_game(i)
+    -- end
+  -- end
   
   -- name of this game
     print("Fishing Game", GW / 2 - str_px_width("Fishing Game")/2, 2, flr(t()* 3))  
